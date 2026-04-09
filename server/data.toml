@@ -1,0 +1,19 @@
+[material.bce400bb-8c48-513d-9be0-8e2e2b310986]
+name = "Foggy Crystal"
+theme = "Magical"
+rarity = "Common"
+
+[material.0916b69a-54a5-57a1-b741-261f6f7e6153]
+name = "Iron Bolt"
+theme = "Mechanical"
+rarity = "Common"
+
+[material.9143f8b0-487a-58f7-8f3c-6ec01096a3c0]
+name = "Pale Bloom"
+theme = "Natural"
+rarity = "Common"
+
+[material.d2dc418b-ca86-5355-8129-66a446032660]
+name = "Bland Water"
+theme = "Oceanic"
+rarity = "Common"
