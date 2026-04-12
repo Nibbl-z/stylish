@@ -1,4 +1,5 @@
 use std::{collections::HashMap, env};
+use actix_cors::Cors;
 use dotenv::dotenv;
 use actix_web::{App, HttpResponse, HttpServer, Responder, get, web};
 use reqwest::Client;
@@ -116,6 +117,12 @@ async fn get_data(info: web::Path<(String,)>) -> impl Responder {
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
+        .wrap(
+            Cors::default()
+            .allow_any_origin()
+            .allow_any_header()
+            .allow_any_method()
+        )
             .service(get_data)
     })
     .bind(("127.0.0.1", 8080))?

@@ -1,1 +1,20 @@
 @import 'tailwindcss';
+
+@theme {
+    --color-common: rgb(200,200,200);
+    --color-uncommon: rgb(50, 250, 50);
+    --color-rare: rgb(50, 100, 255);
+    --color-epic: rgb(120, 30, 255);
+    --color-legendary: rgb(255, 210, 10);
+    --color-mythic: rgb(255,0,0);
+}
+
+@layer base {
+    html {
+        background-color: rgb(10,10,10);
+    }
+
+    p, li {
+        color: white
+    }
+}
