@@ -1,4 +1,4 @@
-enum Rarity {
+export enum Rarity {
     COMMON = "Common",
     UNCOMMON = "Uncommon",
     RARE = "Rare",
@@ -16,7 +16,7 @@ export const rarityStyles: {[rarity in Rarity] : string} = {
     Mythic : "text-mythic"
 }
 
-enum Theme {
+export enum Theme {
     Magical = "Magical",
     Mechanical = "Mechanical",
     Natural = "Natural",
@@ -26,7 +26,14 @@ enum Theme {
     StyleSoul = "StyleSoul"
 }
 
-enum BlueprintCategory {
+export enum BlueprintTheme {
+    Magical = "Magical",
+    Mechanical = "Mechanical",
+    Natural = "Natural",
+    Oceanic = "Oceanic",
+}
+
+export enum BlueprintCategory {
     Standard = "Standard",
     Exclusive = "Exclusive",
     Arcane = "Arcane"
@@ -57,7 +64,7 @@ export interface BlueprintQuantity {
 }
 
 export interface Blueprint extends Asset {
-    theme: Theme,
+    theme: BlueprintTheme,
     category: BlueprintCategory
 }
 
@@ -147,632 +154,632 @@ export const blueprints: Blueprint[] = [
     {
         name: "Toolbox",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wrench (Pipe)",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Hair Dryer",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Mechanic's Cap",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Gauntlet",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Holosword",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Night Vision Goggles",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Holosword (Serrated)",
         rarity: Rarity.RARE,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Night Vision Goggles (Arachno)",
         rarity: Rarity.RARE,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fire Fist",
         rarity: Rarity.EPIC,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Hothead",
         rarity: Rarity.EPIC,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Gauntlet (Elemental)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Hothead (Explode)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     // Engineer Crate
     {
         name: "Hammer (Welding)",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wrench",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Hard Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Welding Mask",
         rarity: Rarity.COMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Blowtorch",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Gearhead",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Hard Hat (Headlight)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wrench (Giga)",
         rarity: Rarity.RARE,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Welding Mask (At Work)",
         rarity: Rarity.RARE,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Chainsaw Hand",
         rarity: Rarity.EPIC,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Beam Sword",
         rarity: Rarity.EPIC,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Drill Arm",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Beam Sword (Dual)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Mechanical,
+        theme: BlueprintTheme.Mechanical,
         category: BlueprintCategory.Standard
     },
     // Fruit Crate
     {
         name: "Banana",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sprouted",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sun Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sun Hat (Bow)",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Blockle Tea",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sprouted (Bloom)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Bucket Hat (Strawberry)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Banana Head",
         rarity: Rarity.RARE,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fruit Crown",
         rarity: Rarity.RARE,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Strawberry Head",
         rarity: Rarity.EPIC,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Banana Head (Peeled)",
         rarity: Rarity.EPIC,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Flower Umbrella",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Banana Head (Crazy Nana)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     // Garden Crate
     {
         name: "Rose",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Trowel",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Straw Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sun Hat (Outline)",
         rarity: Rarity.COMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Watering Can",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Bucket Hat (Floral)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Flower Crown",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Toadstool",
         rarity: Rarity.RARE,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Bouquet",
         rarity: Rarity.RARE,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fire Fist (Soul)",
         rarity: Rarity.EPIC,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Gnome",
         rarity: Rarity.EPIC,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Toadstool (Fungi)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     {
         name: "Gnome (Botanical)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Natural,
+        theme: BlueprintTheme.Natural,
         category: BlueprintCategory.Standard
     },
     // Sailor Crate
     {
         name: "Oar",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plunderer's Bandana",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sailor Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Snorkel",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Harpoon",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fishing Hat",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sailor Hat (Striped)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Harpoon (Sharkbait)",
         rarity: Rarity.RARE,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Diving Helmet",
         rarity: Rarity.RARE,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fire Fist (Energy)",
         rarity: Rarity.EPIC,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fishbowl",
         rarity: Rarity.EPIC,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Arm Cannon (Buccaneer)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Diving Helment (Raptured)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     // Plunder Crate
     {
         name: "Oar (Shipwrecked)",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hook",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Viking Shield (Black)",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plunderer's Bandana (Skull)",
         rarity: Rarity.COMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Cutlass",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Lantern",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Spyglass",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hook (Gold-Trim)",
         rarity: Rarity.RARE,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hat",
         rarity: Rarity.RARE,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hat (Barnacles)",
         rarity: Rarity.EPIC,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Skull (Scallywag)",
         rarity: Rarity.EPIC,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hook (Phantom)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     {
         name: "Pirate Hat (Phantom)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Oceanic,
+        theme: BlueprintTheme.Oceanic,
         category: BlueprintCategory.Standard
     },
     // Magician Crate
     {
         name: "Playing Cards",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Magicians's Wand",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "3D Glasses",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Top Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Shaman Staff",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Sparkler",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "8-Ball (Classic)",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plague Doctor Staff",
         rarity: Rarity.RARE,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plague Doctor",
         rarity: Rarity.RARE,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plague Doctor Staff (Steampunk)",
         rarity: Rarity.EPIC,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "8-Ball (Holographic)",
         rarity: Rarity.EPIC,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "8-Ball (Golden)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Plague Doctor (Steampunk)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     // Wizardry Crate
      {
         name: "Book",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fez",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Party Hat",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wicked Horns",
         rarity: Rarity.COMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Witch's Broom",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wizard Staff",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Witch Hat",
         rarity: Rarity.UNCOMMON,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wicked Horns (Curved)",
         rarity: Rarity.RARE,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Witch Hat (Striped)",
         rarity: Rarity.RARE,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Fire Fist (Violet)",
         rarity: Rarity.EPIC,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Wizard Hat",
         rarity: Rarity.EPIC,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Book (Spellbook)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
     {
         name: "Skull (Flaming)",
         rarity: Rarity.LEGENDARY,
-        theme: Theme.Magical,
+        theme: BlueprintTheme.Magical,
         category: BlueprintCategory.Standard
     },
 ]
@@ -789,14 +796,14 @@ export function getBlueprint(name: string): Blueprint | undefined {
     return blueprints.find((blueprint) => "Blueprint: " + blueprint.name + " Token" == name)
 }
 
-export function getBlueprintCosts(rarity: Rarity, theme: Theme, category: BlueprintCategory): {rarity: Rarity, amount: number, theme: Theme}[] {
+export function getBlueprintCosts(rarity: Rarity, theme: BlueprintTheme, category: BlueprintCategory): {rarity: Rarity, amount: number, theme: Theme}[] {
     let costs: {rarity: Rarity, amount: number, theme: Theme}[] = []
 
     blueprintCosts[category][rarity].forEach((cost) => {
         costs = [...costs, 
             {rarity: cost.rarity,
             amount: cost.amount,
-            theme: cost.theme || theme
+            theme: cost.theme || Theme[theme.toString() as keyof typeof Theme]
         }]
     })
 
