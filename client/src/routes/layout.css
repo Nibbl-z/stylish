@@ -14,7 +14,7 @@
         background-color: rgb(10,10,10);
     }
 
-    p, li {
+    p, li, h1 {
         color: white
     }
 }

@@ -149,6 +149,30 @@ export const blueprintCosts: {
     }
 }
 
+export const scavengingTrophies: {
+    [category in BlueprintCategory] : {
+        [rarity: string] : number
+    }
+} = {
+    Standard: {
+        Common: 1,
+        Uncommon: 2,
+        Rare: 3,
+        Epic: 5,
+        Legendary: 7,
+        Mythic: 10
+    },
+    Exclusive: {
+        Rare: 6,
+        Epic: 10,
+        Legendary: 14,
+        Mythic: 20
+    },
+    Arcane: {
+        Mythic: 30
+    }
+}
+
 export const blueprints: Blueprint[] = [
     // Mechanic Crate
     {
